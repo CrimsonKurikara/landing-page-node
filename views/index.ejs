@@ -24,7 +24,7 @@
     </nav>
     <header>
         <article>
-            <h1>Blue Edtech</h1>
+            <h1>Bem Vindo(a) <%= nome %></h1>
             <p>Usar a força revolucionária da tecnologia para conectar pessoas e expandir horizontes com metodologias e
                 ensino inovador. Este é o nosso propósito, e é por isso que antes de uma escola de tecnologia da
                 informação,
@@ -41,15 +41,17 @@
             <article id="content">
                 <h3>Desenvolvimento de Software</h3>
                 <ul>
-                    <li>Backend</li>
-                    <li>Frontend</li>
-                    <li>Fullstack</li>
+                    <% devList.forEach(item => { %>
+                        <li><%= item %></li>
+                    <% }) %> 
                 </ul>
                 <h3>Analytics</h3>
                 <ul>
-                    <li>Engenharia de dados</li>
-                    <li>Ciência de dados</li>
+                    <% analyticsList.forEach(item => { %>
+                        <li><%= item %></li>
+                    <% }) %> 
                 </ul>
+                
                 <a id="inscrever" href="#inscrever">Inscreva-se agora!</a>
             </article>
         </section>
